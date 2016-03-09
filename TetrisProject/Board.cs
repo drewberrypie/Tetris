@@ -10,7 +10,7 @@ namespace TetrisProject
     /// <summary>
     /// Board object for the tetris game, contains all the blocks and colors
     /// </summary>
-    class Board : IBoard
+    public class Board : IBoard
     {
         private Color[,] board = new Color[10, 20];
         private IShape shape;

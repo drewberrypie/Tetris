@@ -11,13 +11,8 @@ namespace TetrisProject
     {
         public ShapeO(IBoard board) : base(board)
         {
-            blocks = new Block[4]
-                {
-                    new Block(board, new Point(4, 0)),
-                    new Block(board, new Point(5 ,0)),
-                    new Block(board, new Point(4, 1)),
-                    new Block(board, new Point(5, 1))
-                };
+            //Set the position of Blocks to the top
+            blockPositions();
 
             rotationOffset = new Point[][]
             {
@@ -29,5 +24,26 @@ namespace TetrisProject
                 new Point[] { new Point(0, 0) }
             };
         }
+
+        /// <summary>
+        /// Assign blocks to top middle of board
+        /// </summary>
+        /// <param name="board">board referenced</param>
+        public void blockPositions()
+        {
+            blocks = new Block[4]
+                {
+                    new Block(board, new Point(4, 0)),
+                    new Block(board, new Point(5 ,0)),
+                    new Block(board, new Point(4, 1)),
+                    new Block(board, new Point(5, 1))
+                };
+        }
+
+        public override void Reset()
+        {
+        }
+
+
     }
 }

@@ -22,10 +22,6 @@ namespace TetrisProject
         /// </summary>
         public event JoinPileHandler JoinPile;
 
-        public abstract void setShape();
-
-        //
-
         /// <summary>
         /// Shape constructor
         /// </summary>
@@ -144,10 +140,7 @@ namespace TetrisProject
         /// <summary>
         /// Reset shape to the top middle and at rotation 0
         /// </summary>
-        public void Reset()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Reset();
 
         /// <summary>
         /// Method which fires the JoinPile event when a shape stops
