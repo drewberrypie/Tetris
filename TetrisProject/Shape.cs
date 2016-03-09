@@ -24,7 +24,7 @@ namespace TetrisProject
 
         public abstract void setShape();
 
-        //example
+        //
 
         /// <summary>
         /// Shape constructor
