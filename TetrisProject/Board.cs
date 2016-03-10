@@ -88,15 +88,26 @@ namespace TetrisProject
         /// <param name="shape"></param>
         private void addToPile(IShape shape)
         {
-            bool filled;
+            bool clear;
+            //Go through columns bottom-up
             for (int y = board.GetLength(1) - 1; y >= 0; y--)
             {
-                filled = true;
+                clear = true;
+                //Go through rows left-right
                 for (int x = 0; x < board.GetLength(0); x++)
                 {
-                    filled &= !board[x, y].Equals(Color.Gray);
+                    clear &= !board[x, y].Equals(Color.Gray);
                 }
-                board.splice
+                
+                //If a row is filled
+                if(clear)
+                {
+                    //Gray-out all squares in filled row
+                    for (int x = 0; x < board.GetLength(0); x++)
+                        board[x, y] = Color.Gray;
+
+
+                }
             }
         }
     }
