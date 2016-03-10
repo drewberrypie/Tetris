@@ -88,7 +88,7 @@ namespace TetrisProject
         /// <param name="shape"></param>
         private void addToPile(IShape shape)
         {
-
+            foreach
         }
     }
 }

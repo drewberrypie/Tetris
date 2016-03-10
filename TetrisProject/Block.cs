@@ -137,7 +137,7 @@ namespace TetrisProject
         public void Rotate(Point offset)
         {
             if (TryRotate(offset))
-                Position.Offset(offset.X, offset.Y);
+                position.Offset(offset.X, offset.Y);
         }
     }
 }
