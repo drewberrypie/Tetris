@@ -28,7 +28,7 @@ namespace TetrisProject
 
             rotationOffset = new Point[][]
                 {
-                    //1 2 3 4
+                    //0 1 2 3
 
                     new Point[] { new Point(-2, -2), new Point(2, 2) },
                     new Point[] { new Point(-1, -1), new Point(1, 1) },

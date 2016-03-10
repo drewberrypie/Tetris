@@ -90,22 +90,24 @@ namespace TetrisProject
         {
             bool clear;
             //Go through columns bottom-up
-            for (int y = board.GetLength(1) - 1; y >= 0; y--)
+            for (int y = 0; y < board.GetLength(1); y++)
             {
                 clear = true;
                 //Go through rows left-right
                 for (int x = 0; x < board.GetLength(0); x++)
-                {
                     clear &= !board[x, y].Equals(Color.Gray);
-                }
                 
                 //If a row is filled
                 if(clear)
                 {
                     //Gray-out all squares in filled row
-                    for (int x = 0; x < board.GetLength(0); x++)
-                        board[x, y] = Color.Gray;
+                    for (int clearX = 0; clearX < board.GetLength(0); clearX++)
+                        board[clearX, y] = Color.Gray;
 
+                    //Drop all blocks above
+                    for (int dropY = y; dropY > 0; y--)
+                        for (int dropX = 0; dropX < board.GetLength(0); dropX++)
+                            board[dropX, dropY] = board[dropX, dropY - 1];
 
                 }
             }
