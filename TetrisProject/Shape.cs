@@ -114,26 +114,27 @@ namespace TetrisProject
         }
 
         /// <summary>
-        /// Rotate the Shape clockwise relative to the position offset
+        /// Rotate the Shape counter clockwise relative to the position offset
         /// </summary>
         public void Rotate()
         {
-            bool clear = true;
-            int rotation = 0;
+            if (rotationOffset.GetLength(1) == 1)
+                return;
 
-            if ((currentRotation + 1) >= rotationOffset.GetLength(0))
-                rotation = -currentRotation;
-            else
-                rotation = 1;
+            bool clear = true;
+            int temp = currentRotation++;
+
+            if (currentRotation + 1 > rotationOffset.GetLength(1))
+                temp = 0;
 
             //Check if each block can rotate
             for (int i = 0; i < Length; i++)
-                if (!blocks[i].TryRotate(rotationOffset[currentRotation + rotation][i]))
+                if (!blocks[i].TryRotate(rotationOffset[temp][i]))
                     clear = false;
 
             if (clear)
             {
-                currentRotation += rotation;
+                currentRotation++;
 
                 for (int i = 0; i < Length; i++)
                     blocks[i].Rotate(rotationOffset[currentRotation][i]);
@@ -150,7 +151,8 @@ namespace TetrisProject
         /// </summary>
         protected void OnJoinPile()
         {
-            JoinPile(this);
+            if (JoinPile != null)
+                JoinPile(this);
         }
     }
 }

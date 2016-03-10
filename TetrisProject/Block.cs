@@ -92,7 +92,7 @@ namespace TetrisProject
 
             try
             {
-                if (board[check.X, check.Y].Equals(Color.Gray))
+                if (!board[check.X, check.Y].Equals(Color.Gray))
                     clear = false;
             }
             catch (IndexOutOfRangeException e)

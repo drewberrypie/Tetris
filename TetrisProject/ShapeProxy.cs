@@ -24,8 +24,8 @@ namespace TetrisProject
         /// <param name="current">Shape subclass used</param>
         public ShapeProxy(IBoard board)
         {
-
             this.board = board;
+            DeployNewShape();
         }
 
         /// <summary>
