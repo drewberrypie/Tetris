@@ -85,10 +85,16 @@ namespace TetrisProject
         /// <summary>
         /// Event handler for the JoinPile event
         /// </summary>
-        /// <param name="shape"></param>
+        /// <param name="shape">Shape which stopped moving</param>
         private void addToPile(IShape shape)
         {
+            //Put the color of the blocks into the board
+            for(int i = 0; i < shape.Length; i++)
+                board[shape[i].Position.X, shape[i].Position.Y] = shape[i].Colour;
+
             bool clear;
+            int lines = 0;
+
             //Go through columns bottom-up
             for (int y = 0; y < board.GetLength(1); y++)
             {
@@ -100,6 +106,9 @@ namespace TetrisProject
                 //If a row is filled
                 if(clear)
                 {
+                    //Increase number of lines cleared
+                    lines++;
+
                     //Gray-out all squares in filled row
                     for (int clearX = 0; clearX < board.GetLength(0); clearX++)
                         board[clearX, y] = Color.Gray;
@@ -108,9 +117,10 @@ namespace TetrisProject
                     for (int dropY = y; dropY > 0; y--)
                         for (int dropX = 0; dropX < board.GetLength(0); dropX++)
                             board[dropX, dropY] = board[dropX, dropY - 1];
-
                 }
             }
+            //Fire event for lines cleared
+            OnLinesCleared(lines);
         }
     }
 }
