@@ -1,0 +1,7 @@
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\bin\Debug\TetrisProjectTest.dll
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\bin\Debug\TetrisProjectTest.pdb
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\bin\Debug\TetrisProject.dll
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\bin\Debug\TetrisProject.pdb
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.csprojResolveAssemblyReference.cache
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.dll
+C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.pdb
