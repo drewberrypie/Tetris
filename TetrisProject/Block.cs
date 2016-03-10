@@ -73,7 +73,7 @@ namespace TetrisProject
         /// <returns>Returns true if down move is possible, otherwise false</returns>
         public bool TryMoveDown()
         {
-            if (position.Y < board.GetLength(1) && board[position.X + 1, position.Y].Equals(Color.Gray))
+            if (position.Y < board.GetLength(1) && board[position.X, position.Y + 1].Equals(Color.Gray))
                 return true;
             else
                 return false;
@@ -86,11 +86,18 @@ namespace TetrisProject
         public bool TryRotate(Point offset)
         {
             bool clear = true;
-            Point test = new Point(position.X, position.Y);
-            test.Offset(offset.X, offset.Y);
+            Point check = new Point(position.X, position.Y);
+            check.Offset(offset.X, offset.Y);
 
-            if (board[test.X, test.Y].Equals(Color.Gray))
+            try
+            {
+                if (board[check.X, check.Y].Equals(Color.Gray))
+                    clear = false;
+            }
+            catch (IndexOutOfRangeException e)
+            {
                 clear = false;
+            }
 
             return clear;
         }

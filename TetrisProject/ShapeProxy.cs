@@ -17,6 +17,11 @@ namespace TetrisProject
 
         public event JoinPileHandler JoinPile;
 
+        /// <summary>
+        /// Shape constructor
+        /// </summary>
+        /// <param name="board">board referenced</param>
+        /// <param name="current">Shape subclass used</param>
         public ShapeProxy(IBoard board, IShape current)
         {
             this.board = board;
@@ -41,9 +46,40 @@ namespace TetrisProject
             get { return current[index]; }
         }
 
+        /// <summary>
+        /// Determines which shape the Proxy will be
+        /// </summary>
         public void DeployNewShape()
         {
-            throw new NotImplementedException();
+            //Randomize between the 7 shapes that can be taken, O, S, Z, I, J, L, T
+            int decider = random.Next(1, 8);
+
+            switch (decider)
+            {
+                case 1:
+                    current = new ShapeO(board);
+                    break;
+                case 2:
+                    current = new ShapeS(board);
+                    break;
+                case 3:
+                    current = new ShapeZ(board);
+                    break;
+                case 4:
+                    current = new ShapeI(board);
+                    break;
+                case 5:
+                    current = new ShapeJ(board);
+                    break;
+                case 6:
+                    current = new ShapeL(board);
+                    break;
+                case 7:
+                    current = new ShapeT(board);
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>
@@ -87,6 +123,9 @@ namespace TetrisProject
             current.Rotate();
         }
 
+        /// <summary>
+        /// Reset block to top middle of shape
+        /// </summary>
         public void Reset()
         {
             current.Reset();
