@@ -38,7 +38,5 @@ namespace TetrisProjectTest
             int i = board.GetLength(3);
             //Assert (Catch exception)
         }
-        [TestMethod]
-
     }
 }

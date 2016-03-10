@@ -122,15 +122,14 @@ namespace TetrisProject
                 return;
 
             bool clear = true;
-            int temp = currentRotation++;
+            int temp = currentRotation + 1;
 
-            if (currentRotation + 1 > rotationOffset.GetLength(1))
+            if (temp >= rotationOffset.GetLength(1))
                 temp = 0;
 
             //Check if each block can rotate
             for (int i = 0; i < Length; i++)
-                if (!blocks[i].TryRotate(rotationOffset[temp][i]))
-                    clear = false;
+                clear &= blocks[i].TryRotate(rotationOffset[temp][i]);
 
             if (clear)
             {

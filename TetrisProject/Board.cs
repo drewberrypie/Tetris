@@ -121,6 +121,8 @@ namespace TetrisProject
             }
             //Fire event for lines cleared
             OnLinesCleared(lines);
+            
+            //Get a new shape
             shapeFactory.DeployNewShape();
         }
     }
