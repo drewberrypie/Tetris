@@ -20,6 +20,7 @@ namespace TetrisProject
         {
             blocks = new Block[4]
                 {
+                        //test
                     new Block(board, new Point(4, 0), Color.Yellow),
                     new Block(board, new Point(5 ,0), Color.Yellow),
                     new Block(board, new Point(4, 1), Color.Yellow),
