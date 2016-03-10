@@ -118,7 +118,7 @@ namespace TetrisProject
         /// </summary>
         public void Rotate()
         {
-            if (rotationOffset.GetLength(1) == 1)
+            if (rotationOffset.GetLength(0) == 1)
                 return;
 
             bool clear = true;

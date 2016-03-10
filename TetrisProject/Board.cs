@@ -71,7 +71,8 @@ namespace TetrisProject
         /// <param name="lines">Number of lines the player cleared</param>
         protected void OnLinesCleared(int lines)
         {
-            LinesCleared(lines);
+            if (LinesCleared != null)
+                LinesCleared(lines);
         }
 
         /// <summary>
@@ -79,7 +80,8 @@ namespace TetrisProject
         /// </summary>
         protected void OnGameOver()
         {
-            GameOver();
+            if (GameOver != null)
+                GameOver();
         }
 
         /// <summary>
