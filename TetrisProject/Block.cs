@@ -62,7 +62,7 @@ namespace TetrisProject
         /// <returns>Returns true if right move is possible, otherwise false</returns>
         public bool TryMoveRight()
         {
-            if (position.X < board.GetLength(0) && board[position.X + 1, position.Y].Equals(Color.Gray))
+            if (position.X <= board.GetLength(0) && board[position.X + 1, position.Y].Equals(Color.Gray))
                 return true;
             else
                 return false;
@@ -74,7 +74,7 @@ namespace TetrisProject
         /// <returns>Returns true if down move is possible, otherwise false</returns>
         public bool TryMoveDown()
         {
-            if (position.Y < board.GetLength(1) && board[position.X, position.Y + 1].Equals(Color.Gray))
+            if (position.Y <= board.GetLength(1) && board[position.X, position.Y + 1].Equals(Color.Gray))
                 return true;
             else
                 return false;

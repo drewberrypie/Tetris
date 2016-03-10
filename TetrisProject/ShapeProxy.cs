@@ -24,6 +24,7 @@ namespace TetrisProject
         /// <param name="current">Shape subclass used</param>
         public ShapeProxy(IBoard board)
         {
+
             this.board = board;
         }
 
@@ -128,6 +129,14 @@ namespace TetrisProject
         public void Reset()
         {
             current.Reset();
+        }
+
+        /// <summary>
+        /// Method which fires the JoinPile event when a shape stops
+        /// </summary>
+        protected void OnJoinPile()
+        {
+            JoinPile(current);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TetrisProject
         }
 
         /// <summary>
-        /// Increases the number of lines cleared, difficulty, and player score
+        /// Event Handler: Increases the number of lines cleared, difficulty, and player score
         /// </summary>
         /// <param name="cleared">Number of lines cleared</param>
         private void incrementLinesCleared(int cleared)

@@ -109,6 +109,8 @@ namespace TetrisProject
 
             while (canMove)
                 canMove = MoveDown();
+
+            OnJoinPile();
         }
 
         /// <summary>

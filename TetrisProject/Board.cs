@@ -88,7 +88,16 @@ namespace TetrisProject
         /// <param name="shape"></param>
         private void addToPile(IShape shape)
         {
-            foreach
+            bool filled;
+            for (int y = board.GetLength(1) - 1; y >= 0; y--)
+            {
+                filled = true;
+                for (int x = 0; x < board.GetLength(0); x++)
+                {
+                    filled &= !board[x, y].Equals(Color.Gray);
+                }
+                board.splice
+            }
         }
     }
 }
