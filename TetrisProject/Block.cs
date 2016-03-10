@@ -20,10 +20,11 @@ namespace TetrisProject
         /// Block object to be placed into a shape and then on a board
         /// </summary>
         /// <param name="board">Reference board</param>
-        public Block(IBoard board, Point position)
+        public Block(IBoard board, Point position, Color colour)
         {
             this.board = board;
             this.position = position;
+            this.colour = colour;
         }
 
         /// <summary>

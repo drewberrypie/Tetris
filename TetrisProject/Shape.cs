@@ -94,6 +94,8 @@ namespace TetrisProject
             if (clear)
                 foreach (Block b in blocks)
                     b.MoveDown();
+            else
+                OnJoinPile();
 
             return clear;
         }
@@ -107,7 +109,6 @@ namespace TetrisProject
 
             while (canMove)
                 canMove = MoveDown();
-
         }
 
         /// <summary>

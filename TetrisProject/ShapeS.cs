@@ -20,10 +20,10 @@ namespace TetrisProject
         {
             blocks = new Block[4]
                 {
-                    new Block(board, new Point(5, 0)),
-                    new Block(board, new Point(6 ,0)),
-                    new Block(board, new Point(4, 1)),
-                    new Block(board, new Point(5, 1))
+                    new Block(board, new Point(5, 0), Color.Green),
+                    new Block(board, new Point(6 ,0), Color.Green),
+                    new Block(board, new Point(4, 1), Color.Green),
+                    new Block(board, new Point(5, 1), Color.Green)
                 };
 
             rotationOffset = new Point[][]
