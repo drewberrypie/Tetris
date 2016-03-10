@@ -18,7 +18,7 @@ namespace TetrisProject
         protected int currentRotation = 0;
 
         /// <summary>
-        /// Event to keep track board blocks
+        /// Event to keep track of shapes coming to a stop in a board
         /// </summary>
         public event JoinPileHandler JoinPile;
 

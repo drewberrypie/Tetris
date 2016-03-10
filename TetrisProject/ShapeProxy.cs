@@ -18,14 +18,13 @@ namespace TetrisProject
         public event JoinPileHandler JoinPile;
 
         /// <summary>
-        /// Shape constructor
+        /// Shape object proxy which allows the board to interact with any shape
         /// </summary>
         /// <param name="board">board referenced</param>
         /// <param name="current">Shape subclass used</param>
-        public ShapeProxy(IBoard board, IShape current)
+        public ShapeProxy(IBoard board)
         {
             this.board = board;
-            this.current = current;
         }
 
         /// <summary>
@@ -64,7 +63,7 @@ namespace TetrisProject
                     break;
                 case 3:
                     current = new ShapeZ(board);
-                    break;
+                    break; 
                 case 4:
                     current = new ShapeI(board);
                     break;

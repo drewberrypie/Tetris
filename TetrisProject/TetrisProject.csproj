@@ -44,6 +44,7 @@
     <Compile Include="Block.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="ShapeI.cs" />
+    <Compile Include="ShapeJ.cs" />
     <Compile Include="ShapeL.cs" />
     <Compile Include="ShapeO.cs" />
     <Compile Include="IBoard.cs" />

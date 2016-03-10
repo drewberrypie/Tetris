@@ -29,6 +29,10 @@ namespace TetrisProject
                 for (int y = 0; y<board.GetLength(1); y++)
                  board[x, y] = Color.Gray;
 
+            ShapeProxy proxy = new ShapeProxy(this);
+            shapeFactory = proxy;
+            shape = proxy;
+
             shape.JoinPile += addToPile;
         }
 
