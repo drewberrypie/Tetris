@@ -40,8 +40,8 @@ namespace TetrisProject
         /// </summary>
         public Point Position
         {
-            get;
-            set;
+            get { return position; }
+            set { position = value; }
         }
 
         /// <summary>
