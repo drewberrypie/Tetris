@@ -118,25 +118,25 @@ namespace TetrisProject
         /// </summary>
         public void Rotate()
         {
-            if (rotationOffset.GetLength(0) == 1)
+            if (rotationOffset[0].Length == 1)
                 return;
 
             bool clear = true;
             int temp = currentRotation + 1;
 
-            if (temp >= rotationOffset.GetLength(1))
+            if (temp >= rotationOffset[0].Length)
                 temp = 0;
 
             //Check if each block can rotate
-            for (int i = 0; i < Length; i++)
-                clear &= blocks[i].TryRotate(rotationOffset[temp][i]);
+            for (int i = 0; i < 4; i++)
+                clear &= blocks[i].TryRotate(rotationOffset[i][temp]);
 
             if (clear)
             {
-                currentRotation++;
+                currentRotation = temp;
 
-                for (int i = 0; i < Length; i++)
-                    blocks[i].Rotate(rotationOffset[currentRotation][i]);
+                for (int i = 0; i < 4; i++)
+                    blocks[i].Rotate(rotationOffset[i][currentRotation]);
             }
         }
 
