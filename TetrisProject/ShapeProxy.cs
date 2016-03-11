@@ -134,7 +134,7 @@ namespace TetrisProject
         /// <summary>
         /// Method which fires the JoinPile event when a shape stops
         /// </summary>
-        protected void OnJoinPile()
+        public void OnJoinPile()
         {
             JoinPile(current);
         }
