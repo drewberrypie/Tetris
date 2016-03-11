@@ -94,7 +94,7 @@ namespace TetrisProject
         /// Moves the current Shape right if possible
         /// </summary>
         public void MoveRight()
-        {
+        {   
             current.MoveRight();
         }
 
