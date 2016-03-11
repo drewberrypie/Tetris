@@ -10,8 +10,11 @@ namespace TetrisProjectTest
         [TestMethod]
         public void Score_ConstructedCorrectly()
         {
+            //Assemble
             Board board = new Board();
+            //Act
             Score s = new Score(board);
+            //Assert
             Assert.IsInstanceOfType(s, typeof(Score));
         }
     }
