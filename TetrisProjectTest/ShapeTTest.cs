@@ -134,29 +134,11 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeT(b);
             s.MoveDown();
-            Console.WriteLine("Rotate 0");
-            Console.WriteLine(s[0].Position);
-            Console.WriteLine(s[1].Position);
-            Console.WriteLine(s[2].Position);
-            Console.WriteLine(s[3].Position);
+            //Act
             s.Rotate();
-            Console.WriteLine("Rotate 1");
-            Console.WriteLine(s[0].Position);
-            Console.WriteLine(s[1].Position);
-            Console.WriteLine(s[2].Position);
-            Console.WriteLine(s[3].Position);
             s.Rotate();
-            Console.WriteLine("Rotate 2");
-            Console.WriteLine(s[0].Position);
-            Console.WriteLine(s[1].Position);
-            Console.WriteLine(s[2].Position);
-            Console.WriteLine(s[3].Position);
             s.Rotate();
-            Console.WriteLine("Rotate 3");
-            Console.WriteLine(s[0].Position);
-            Console.WriteLine(s[1].Position);
-            Console.WriteLine(s[2].Position);
-            Console.WriteLine(s[3].Position);
+            //Assert
             Assert.AreEqual(new Point(5, 0), s[0].Position);
         }
         [TestMethod]
@@ -166,6 +148,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeT(b);
             s.MoveDown();
+            //
             s.Rotate();
             s.Rotate();
             s.Rotate();
@@ -180,6 +163,11 @@ namespace TetrisProjectTest
             Shape s = new ShapeT(b);
             s.Rotate();
             Assert.AreEqual(new Point(4, 0), s[0].Position);
+        }
+        [TestMethod]
+        public void Reset_PositionReset()
+        {
+            //Assemble
         }
     }
 }
