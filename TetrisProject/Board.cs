@@ -78,11 +78,12 @@ namespace TetrisProject
         /// <summary>
         /// Method which fires the GameOver event when the game ends
         /// </summary>
-        public void OnGameOver()
+        protected void OnGameOver()
         {
             if (GameOver != null)
                 GameOver();
         }
+
 
         /// <summary>
         /// Event handler for the JoinPile event

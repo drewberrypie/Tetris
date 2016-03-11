@@ -55,7 +55,7 @@ namespace TetrisProjectTest
             Assert.AreEqual("Game Over triggered", receivedEvents[0]);
         }
         [TestMethod]
-        public void OnLineCleared_Triggered()
+        public void OnJoinPile_Triggered()
         {
             //Assemble
             Board board = new Board();
@@ -74,8 +74,6 @@ namespace TetrisProjectTest
             s.Drop();
             //Assert
             Assert.AreEqual("triggered", receivedEventsJoin[0]);
-            //Assert.AreEqual(0, receivedEvents[0]);
-
         }
     }
 }
