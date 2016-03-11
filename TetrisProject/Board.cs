@@ -78,7 +78,7 @@ namespace TetrisProject
         /// <summary>
         /// Method which fires the GameOver event when the game ends
         /// </summary>
-        protected void OnGameOver()
+        public void OnGameOver()
         {
             if (GameOver != null)
                 GameOver();

@@ -38,5 +38,21 @@ namespace TetrisProjectTest
             int i = board.GetLength(3);
             //Assert (Catch exception)
         }
+        [TestMethod]
+        public void GameOver_EventFired()
+        {
+            //Assemble
+            Board board = new Board();
+            List<string> receivedEvents = new List<string>();
+            board.GameOver += delegate ()
+            {
+                receivedEvents.Add("Game Over triggered");
+            };
+            //Act
+            board.OnGameOver();
+            //Assert
+            Assert.AreEqual(1, receivedEvents.Count);
+            Assert.AreEqual("Game Over triggered", receivedEvents[0]);
+        }
     }
 }
