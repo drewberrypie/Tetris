@@ -163,7 +163,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeJ(b);
             s.Rotate();
-            Assert.AreEqual(new Point(4, 2), s[0].Position);
+            Assert.AreEqual(new Point(4, 0), s[0].Position);
         }
         [TestMethod]
         public void Reset_RegularUsage()

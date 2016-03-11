@@ -73,7 +73,7 @@ namespace TetrisProject
             bool clear = true;
 
             foreach (Block b in blocks)
-                clear = b.TryMoveRight();
+                clear &= b.TryMoveRight();
 
             if (clear)
                 foreach (Block b in blocks)

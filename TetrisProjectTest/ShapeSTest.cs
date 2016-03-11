@@ -47,7 +47,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeS(b);
             s.MoveRight();
-            Assert.AreEqual(new Point(5, 1), s[0].Position);
+            Assert.AreEqual(new Point(6, 0), s[0].Position);
         }
         [TestMethod]
         public void MoveRight_NoSpace()
@@ -69,7 +69,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeS(b);
             s.MoveDown();
-            Assert.AreEqual(new Point(6, 1), s[0].Position);
+            Assert.AreEqual(new Point(5, 1), s[0].Position);
         }
         [TestMethod]
         public void MoveDown_NoSpace()
@@ -114,8 +114,19 @@ namespace TetrisProjectTest
             Shape s = new ShapeS(b);
             s.MoveDown();
             s.MoveDown();
+
+            Console.WriteLine("Rotate 0");
+            Console.WriteLine(s[0].Position);
+            Console.WriteLine(s[1].Position);
+            Console.WriteLine(s[2].Position);
+            Console.WriteLine(s[3].Position);
             s.Rotate();
-            Assert.AreEqual(new Point(5, 2), s[1].Position);
+            Console.WriteLine("Rotate 1");
+            Console.WriteLine(s[0].Position);
+            Console.WriteLine(s[1].Position);
+            Console.WriteLine(s[2].Position);
+            Console.WriteLine(s[3].Position);
+            Assert.AreEqual(new Point(5, 1), s[1].Position);
         }
         [TestMethod]
         public void Rotate_EnoughSpaceSecondTime()
@@ -127,7 +138,7 @@ namespace TetrisProjectTest
             s.MoveDown();
             s.Rotate();
             s.Rotate();
-            Assert.AreEqual(new Point(6, 3), s[1].Position);
+            Assert.AreEqual(new Point(6, 2), s[1].Position);
         }
         [TestMethod]
         public void Rotate_NoSpace()
@@ -136,7 +147,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeS(b);
             s.Rotate();
-            Assert.AreEqual(new Point(5, 2), s[0].Position);
+            Assert.AreEqual(new Point(5, 0), s[0].Position);
         }
         [TestMethod]
         public void Reset_RegularUsage()

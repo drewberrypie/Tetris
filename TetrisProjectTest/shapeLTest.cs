@@ -60,6 +60,7 @@ namespace TetrisProjectTest
             s[2].Position = new Point(9, 0);
             s[3].Position = new Point(7, 1);
             s.MoveRight();
+            Console.WriteLine(s[2].Position);
             Assert.AreEqual(new Point(7, 0), s[0].Position);
         }
         [TestMethod]
@@ -163,7 +164,7 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeL(b);
             s.Rotate();
-            Assert.AreEqual(new Point(4, 2), s[0].Position);
+            Assert.AreEqual(new Point(4, 0), s[0].Position);
         }
         [TestMethod]
         public void Reset_RegularUsage()
