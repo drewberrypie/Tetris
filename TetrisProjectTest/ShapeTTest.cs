@@ -24,7 +24,9 @@ namespace TetrisProjectTest
             //Assemble
             Board b = new Board();
             Shape s = new ShapeT(b);
+            //Act
             s.MoveLeft();
+            //Assert
             Assert.AreEqual(new Point(3, 0), s[0].Position);
         }
         [TestMethod]
@@ -37,7 +39,9 @@ namespace TetrisProjectTest
             s[1].Position = new Point(1, 0);
             s[2].Position = new Point(2, 0);
             s[3].Position = new Point(1, 1);
+            //Act
             s.MoveLeft();
+            //Assert
             Assert.AreEqual(new Point(0, 0), s[0].Position);
         }
         [TestMethod]
@@ -46,7 +50,9 @@ namespace TetrisProjectTest
             //Assemble
             Board b = new Board();
             Shape s = new ShapeT(b);
+            //Act
             s.MoveRight();
+            //Assert
             Assert.AreEqual(new Point(5, 0), s[0].Position);
         }
         [TestMethod]
@@ -59,7 +65,9 @@ namespace TetrisProjectTest
             s[1].Position = new Point(9, 0);
             s[2].Position = new Point(10, 0);
             s[3].Position = new Point(9, 1);
+            //Act
             s.MoveRight();
+            //Assert
             Assert.AreEqual(new Point(8, 0), s[0].Position);
         }
         [TestMethod]
@@ -68,7 +76,9 @@ namespace TetrisProjectTest
             //Assemble
             Board b = new Board();
             Shape s = new ShapeT(b);
+            //Act
             s.MoveDown();
+            //Assert
             Assert.AreEqual(new Point(4, 1), s[0].Position);
         }
         [TestMethod]
@@ -81,7 +91,9 @@ namespace TetrisProjectTest
             s[1].Position = new Point(5, 19);
             s[2].Position = new Point(6, 19);
             s[3].Position = new Point(5, 20);
+            //Act
             s.MoveDown();
+            //Assert
             Assert.AreEqual(new Point(4, 19), s[0].Position);
         }
         [TestMethod]
@@ -90,7 +102,9 @@ namespace TetrisProjectTest
             //Assemble
             Board b = new Board();
             Shape s = new ShapeT(b);
+            //Act
             s.Drop();
+            //Assert
             Assert.AreEqual(new Point(4, 18), s[0].Position);
         }
         [TestMethod]
@@ -103,7 +117,9 @@ namespace TetrisProjectTest
             s[1].Position = new Point(5, 19);
             s[2].Position = new Point(6, 19);
             s[3].Position = new Point(5, 20);
+            //Act
             s.Drop();
+            //Assert
             Assert.AreEqual(new Point(4, 19), s[0].Position);
         }
         [TestMethod]
@@ -113,7 +129,9 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeT(b);
             s.MoveDown();
+            //Act
             s.Rotate();
+            //Assert
             Assert.AreEqual(new Point(5, 2), s[0].Position);
         }
         [TestMethod]
@@ -124,7 +142,9 @@ namespace TetrisProjectTest
             Shape s = new ShapeT(b);
             s.MoveDown();
             s.Rotate();
+            //Act
             s.Rotate();
+            //Assert
             Assert.AreEqual(new Point(6, 1), s[0].Position);
         }
         [TestMethod]
@@ -148,11 +168,12 @@ namespace TetrisProjectTest
             Board b = new Board();
             Shape s = new ShapeT(b);
             s.MoveDown();
-            //
             s.Rotate();
             s.Rotate();
             s.Rotate();
+            //Act
             s.Rotate();
+            //Assert
             Assert.AreEqual(new Point(4, 1), s[0].Position);
         }
         [TestMethod]
@@ -161,13 +182,25 @@ namespace TetrisProjectTest
             //Assemble
             Board b = new Board();
             Shape s = new ShapeT(b);
+            //Act
             s.Rotate();
+            //Assert
             Assert.AreEqual(new Point(4, 0), s[0].Position);
         }
         [TestMethod]
         public void Reset_PositionReset()
         {
             //Assemble
+            Board b = new Board();
+            Shape s = new ShapeT(b);
+            s[0].Position = new Point(4, 18);
+            s[1].Position = new Point(5, 18);
+            s[2].Position = new Point(6, 18);
+            s[3].Position = new Point(5, 19);
+            //Act
+            s.Reset();
+            //Assert
+            Assert.AreEqual(new Point(4, 0), s[0].Position);
         }
     }
 }
