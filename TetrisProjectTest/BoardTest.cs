@@ -54,5 +54,28 @@ namespace TetrisProjectTest
             Assert.AreEqual(1, receivedEvents.Count);
             Assert.AreEqual("Game Over triggered", receivedEvents[0]);
         }
+        [TestMethod]
+        public void OnLineCleared_Triggered()
+        {
+            //Assemble
+            Board board = new Board();
+            List<int> receivedEvents = new List<int>();
+            board.LinesCleared += delegate (int i)
+            {
+                receivedEvents.Add(i);
+            };
+            Shape s = new ShapeO(board);
+            List<string> receivedEventsJoin = new List<string>();
+            s.JoinPile += delegate (IShape x)
+            {
+                receivedEventsJoin.Add("triggered");
+            };
+            //Act
+            s.Drop();
+            //Assert
+            Assert.AreEqual("triggered", receivedEventsJoin[0]);
+            //Assert.AreEqual(0, receivedEvents[0]);
+
+        }
     }
 }
