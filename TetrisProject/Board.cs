@@ -41,7 +41,7 @@ namespace TetrisProject
         /// </summary>
         public IShape Shape
         {
-            get;
+            get { return shape; }
         }
 
         /// <summary>

@@ -29,6 +29,15 @@ namespace TetrisProject
         }
 
         /// <summary>
+        /// Gets the name (type) of the shape
+        /// </summary>
+        public string Name
+        {
+            get { return current.Name; }
+            set { current.Name = value; }
+        }
+
+        /// <summary>
         /// Gets the current Shape Length
         /// </summary>
         public int Length

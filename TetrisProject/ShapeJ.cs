@@ -18,6 +18,7 @@ namespace TetrisProject
         /// <param name="board">board referenced</param>
         public ShapeJ(IBoard board) : base(board)
         {
+            Name = "J Shape";
             blocks = new Block[4]
                 {
                     new Block(board, new Point(4, 0), Color.Blue),

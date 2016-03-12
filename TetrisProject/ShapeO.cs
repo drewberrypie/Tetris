@@ -18,6 +18,7 @@ namespace TetrisProject
         /// <param name="board">board referenced</param>
         public ShapeO(IBoard board) : base(board)
         {
+            Name = "O Shape";
             blocks = new Block[4]
                 {
                     new Block(board, new Point(4, 0), Color.Yellow),

@@ -18,6 +18,7 @@ namespace TetrisProject
         /// <param name="board">board referenced</param>
         public ShapeL(IBoard board) : base(board)
         {
+            Name = "L Shape";
             blocks = new Block[4]
                 {
                     new Block(board, new Point(4, 0), Color.Orange),

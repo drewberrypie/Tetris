@@ -39,22 +39,6 @@ namespace TetrisProjectTest
             //Assert (Catch exception)
         }
         [TestMethod]
-        public void GameOver_EventFired()
-        {
-            //Assemble
-            Board board = new Board();
-            List<string> receivedEvents = new List<string>();
-            board.GameOver += delegate ()
-            {
-                receivedEvents.Add("Game Over triggered");
-            };
-            //Act
-            board.OnGameOver();
-            //Assert
-            Assert.AreEqual(1, receivedEvents.Count);
-            Assert.AreEqual("Game Over triggered", receivedEvents[0]);
-        }
-        [TestMethod]
         public void OnJoinPile_Triggered()
         {
             //Assemble
@@ -74,6 +58,28 @@ namespace TetrisProjectTest
             s.Drop();
             //Assert
             Assert.AreEqual("triggered", receivedEventsJoin[0]);
+        }
+        [TestMethod]
+        public void Shape_NotNull()
+        {
+            //Assemble
+            Board board = new Board();
+            Console.WriteLine(board.Shape.Name);
+            //Assert
+            Assert.IsNotNull(board.Shape);
+        }
+        [TestMethod]
+        public void ShapeProxy_NotNull()
+        {
+            //Assemble
+            Board board = new Board();
+            ShapeProxy shape = new ShapeProxy(board);
+            //Act
+            Console.WriteLine(shape.Name);
+            shape.DeployNewShape();
+            Console.WriteLine(shape.Name);
+            //Assert
+            Assert.IsNotNull(shape);
         }
     }
 }

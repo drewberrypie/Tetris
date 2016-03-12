@@ -23,6 +23,11 @@ namespace TetrisProject
         event JoinPileHandler JoinPile;
 
         /// <summary>
+        /// Gets the name (type) of the shape
+        /// </summary>
+        string Name { get; set; }
+
+        /// <summary>
         /// Gets the Shape Length
         /// </summary>
         int Length { get; }

@@ -13,6 +13,7 @@ namespace TetrisProject
     public abstract class Shape : IShape
     {
         private IBoard board;
+        private string name;
         protected Block[] blocks;
         protected Point[][] rotationOffset;
         protected int currentRotation = 0;
@@ -29,6 +30,15 @@ namespace TetrisProject
         public Shape(IBoard board)
         {
             this.board = board;
+        }
+
+        /// <summary>
+        /// Gets the name (type) of the shape
+        /// </summary>
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
         }
 
         /// <summary>
