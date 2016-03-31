@@ -1,22 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using TetrisProject;
 
 namespace TetrisGame
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Tetris : Game
+    public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        BoardSprite boardSpite;
-        ShapeSprite shapeSprite;
-        ScoreSprite scoreSprite;
 
-        public Tetris()
+        public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -82,14 +78,6 @@ namespace TetrisGame
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
-        }
-
-        /// <summary>
-        /// Game over event handler
-        /// </summary>
-        public void gameOver()
-        {
-
         }
     }
 }
