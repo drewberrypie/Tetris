@@ -11,6 +11,9 @@ namespace TetrisGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        BoardSprite boardSprite;
+        ShapeSprite shapeSprite;
+        ScoreSprite scoreSprite;
 
         public Game1()
         {
@@ -78,6 +81,14 @@ namespace TetrisGame
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+
+        /// <summary>
+        /// Game Over event handler
+        /// </summary>
+        public void gameOver()
+        {
+
         }
     }
 }
