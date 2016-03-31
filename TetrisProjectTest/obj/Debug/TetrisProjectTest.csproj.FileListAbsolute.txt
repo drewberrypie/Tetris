@@ -5,13 +5,6 @@ C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\bin\Debug\TetrisProje
 C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.csprojResolveAssemblyReference.cache
 C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.dll
 C:\Users\Alienware\Desktop\TetrisProject\TetrisProjectTest\obj\Debug\TetrisProjectTest.pdb
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.dll
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.pdb
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProject.dll
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProject.pdb
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.csprojResolveAssemblyReference.cache
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.dll
-C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.pdb
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.dll
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.pdb
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProject.dll
@@ -19,3 +12,10 @@ C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTes
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.csprojResolveAssemblyReference.cache
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.dll
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.pdb
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.dll
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProjectTest.pdb
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProject.dll
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\bin\Debug\TetrisProject.pdb
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.csprojResolveAssemblyReference.cache
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.dll
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProjectTest\obj\Debug\TetrisProjectTest.pdb

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TetrisProject;
 
 namespace TetrisGame
 {
@@ -11,9 +12,9 @@ namespace TetrisGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        BoardSprite boardSpite;
-        ShapeSprite shapeSprite;
-        ScoreSprite scoreSprite;
+        //BoardSprite boardSpite;
+        //ShapeSprite shapeSprite;
+        //ScoreSprite scoreSprite;
 
         public Tetris()
         {
@@ -63,7 +64,7 @@ namespace TetrisGame
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+                //Exit();
 
             // TODO: Add your update logic here
 
