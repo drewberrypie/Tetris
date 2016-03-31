@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1CBC564F-9D8E-4503-A8EC-F3101EFD1E09}</ProjectGuid>
+    <ProjectGuid>{7821513D-2FB5-4359-8B90-9C5256E0281D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TetrisGame</RootNamespace>
