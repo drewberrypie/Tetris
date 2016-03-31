@@ -10,7 +10,7 @@ using TetrisProject;
 
 namespace TetrisGame
 {
-    class BoardSprite
+    class BoardSprite: DrawableGameComponent
     {
         IBoard board;
 
@@ -20,28 +20,31 @@ namespace TetrisGame
         Texture2D emptyBlock;
         Texture2D filledBlock;
 
-        public BoardSprite(Game game, IBoard board)
+        public BoardSprite(Game game, IBoard board) : base(game)
         {
             this.game = game;
             this.board = board;
         }
 
-        public void Initialize()
+        public override void Initialize()
         {
-            
+            base.Initialize();
         }
 
-        protected void LoadContent()
+        protected override void LoadContent()
+        {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            filledBlock = game.Content.Load<Texture2D>("FilledBlock");
+            emptyBlock = game.Content.Load<Texture2D>("EmptyBlock");
+            base.LoadContent();
+        }
+
+        public override void Update(GameTime gameTime)
         {
 
         }
 
-        public void Update(GameTime gameTime)
-        {
-
-        }
-
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
 
         }

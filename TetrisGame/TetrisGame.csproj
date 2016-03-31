@@ -40,6 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BoardSprite.cs" />
+    <Compile Include="ScoreSprite.cs" />
+    <Compile Include="ShapeSprite.cs" />
     <Compile Include="Tetris.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
