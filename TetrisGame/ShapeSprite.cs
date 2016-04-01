@@ -62,19 +62,40 @@ namespace TetrisGame
             {
                 counterMoveDown++;
             }
-            base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
             int size = 25;
-            //spriteBatch.Begin();
-            base.Draw(gameTime);
+            spriteBatch.Begin();
+            for(int i = 0; i < shape.Length; i++)
+            {
+                System.Drawing.Color color = shape[i].Colour;
+                spriteBatch.Draw(filledBlock, new Vector2(50 + shape[i].Position.X * size, 50 + shape[i].Position.Y * size), new Color(color.R, color.G, color.B));
+            }
+            spriteBatch.End();
         }
 
         private void checkInput()
         {
+            KeyboardState newState = Keyboard.GetState();
 
+            if (newState.IsKeyDown(Keys.Right))
+            {
+                shape.MoveRight();
+            }
+            if (newState.IsKeyDown(Keys.Left))
+            {
+                shape.MoveLeft();
+            }
+            if (newState.IsKeyDown(Keys.Down))
+            {
+                shape.MoveDown();
+            }
+            if (newState.IsKeyDown(Keys.Up))
+            {
+                shape.Drop();
+            }
         }
     }
 }
