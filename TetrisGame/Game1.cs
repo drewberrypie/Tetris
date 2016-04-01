@@ -11,9 +11,9 @@ namespace TetrisGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        BoardSprite boardSprite;
-        ShapeSprite shapeSprite;
-        ScoreSprite scoreSprite;
+        //BoardSprite boardSprite;
+        //ShapeSprite shapeSprite;
+        //ScoreSprite scoreSprite;
 
         public Game1()
         {
