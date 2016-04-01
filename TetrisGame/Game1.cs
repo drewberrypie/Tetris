@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TetrisProject;
 
 namespace TetrisGame
 {
@@ -29,7 +30,27 @@ namespace TetrisGame
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            //Initialize Tetris pieces
+            IBoard board = new Board();
+            Score score = new Score(board);
+
+            //Initialize Sprites
+            boardSprite = new BoardSprite(this, board);
+            shapeSprite = new ShapeSprite(this, board, score);
+            scoreSprite = new ScoreSprite(this, score);
+
+            // Add sprite classes
+            Components.Add(boardSprite);
+            Components.Add(shapeSprite);
+            Components.Add(scoreSprite);
+
+            //Add gameOver Event Handler
+            board.GameOver += gameOver;
+
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 500;
+            graphics.ApplyChanges();
+
 
             base.Initialize();
         }
@@ -76,7 +97,7 @@ namespace TetrisGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.LightSeaGreen);
 
             // TODO: Add your drawing code here
 
