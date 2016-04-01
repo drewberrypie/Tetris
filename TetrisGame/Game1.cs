@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using TetrisProject;
 
 namespace TetrisGame
 {
@@ -29,7 +30,17 @@ namespace TetrisGame
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            //Initialize Tetris pieces
+            IBoard board = new Board();
+            Score score = new Score(board);
+
+            //Initialize Sprites
+            boardSprite = new BoardSprite(this, board);
+            shapeSprite = new ShapeSprite(this, board, score);
+            scoreSprite = new ScoreSprite(this, score);
+
+            //Add gameOver Event Handler
+            board.GameOver += gameOver;
 
             base.Initialize();
         }
