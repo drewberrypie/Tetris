@@ -69,7 +69,7 @@ namespace TetrisGame
                     {
                         c = System.Drawing.Color.DeepPink;
                     }
-                    spriteBatch.Draw(filledBlock, new Rectangle(200 + i, 50 + j, size, size), new Color(c.R, c.G, c.B));
+                    spriteBatch.Draw(filledBlock, new Rectangle(50 + i, 50 + j, size, size), new Color(c.R, c.G, c.B));
                 }
             }
 
@@ -89,7 +89,7 @@ namespace TetrisGame
             {
                 for (int j = 0; j < board.GetLength(1) * size; j += size)
                 {
-                    spriteBatch.Draw(emptyBlock, new Rectangle(200 + i, 50 + j, size, size), Color.DeepPink);
+                    spriteBatch.Draw(emptyBlock, new Rectangle(50 + i, 50 + j, size, size), Color.DeepPink);
                 }
             }
             spriteBatch.End();
