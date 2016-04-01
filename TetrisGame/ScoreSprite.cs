@@ -26,5 +26,15 @@ namespace TetrisGame
             this.game = game;
             this.score = score;
         }
+
+        /// <summary>
+        /// Allows the game to run logic such as updating the Score
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        public override void Update(GameTime gameTime)
+        {
+            // TODO Update time elapsed
+            base.Update(gameTime);
+        }
     }
 }

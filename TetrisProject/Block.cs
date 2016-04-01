@@ -97,6 +97,7 @@ namespace TetrisProject
             }
             catch (IndexOutOfRangeException e)
             {
+                Console.WriteLine("Rotation Failure "+e);
                 clear = false;
             }
 

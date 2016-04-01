@@ -68,8 +68,7 @@ namespace TetrisGame
         public override void Draw(GameTime gameTime)
         {
             int size = 25;
-            spriteBatch.Begin();
-            new Vector2()
+            //spriteBatch.Begin();
             base.Draw(gameTime);
         }
 
