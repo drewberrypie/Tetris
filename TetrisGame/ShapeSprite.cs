@@ -55,7 +55,7 @@ namespace TetrisGame
             int dropDelay = (int)((11 - score.Level) * 0.05);
             if (counterMoveDown == dropDelay)
             {
-                shape.Drop();
+                shape.MoveDown();
                 counterMoveDown = 0;
             }
             else
