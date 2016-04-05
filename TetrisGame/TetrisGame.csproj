@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Content\scoreFont.spritefont" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TetrisProject\TetrisProject.csproj">

@@ -10,11 +10,12 @@ namespace TetrisGame
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        BoardSprite boardSprite;
-        ShapeSprite shapeSprite;
-        ScoreSprite scoreSprite;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private BoardSprite boardSprite;
+        private ShapeSprite shapeSprite;
+        private ScoreSprite scoreSprite;
+        private SpriteFont font;
 
         public Game1()
         {
@@ -63,6 +64,7 @@ namespace TetrisGame
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            font = Content.Load<SpriteFont>("scoreFont");
 
             // TODO: use this.Content to load your game content here
         }
@@ -99,6 +101,10 @@ namespace TetrisGame
         {
             GraphicsDevice.Clear(Color.LightSeaGreen);
 
+            spriteBatch.Begin();
+                spriteBatch.DrawString(font, "TETRIS", new Vector2(130, 20), Color.Blue);
+            spriteBatch.End();
+
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
@@ -109,7 +115,7 @@ namespace TetrisGame
         /// </summary>
         public void gameOver()
         {
-
+            scoreSprite.Play = false;
         }
     }
 }
