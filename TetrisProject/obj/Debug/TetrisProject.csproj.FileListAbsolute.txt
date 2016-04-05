@@ -3,3 +3,7 @@ C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\bi
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\obj\Debug\TetrisProject.csprojResolveAssemblyReference.cache
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\obj\Debug\TetrisProject.dll
 C:\Users\Alienware\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\obj\Debug\TetrisProject.pdb
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\bin\Debug\TetrisProject.dll
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\bin\Debug\TetrisProject.pdb
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\obj\Debug\TetrisProject.dll
+C:\Users\drewa\Documents\Visual Studio 2015\Projects\Tetris\TetrisProject\obj\Debug\TetrisProject.pdb
