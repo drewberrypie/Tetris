@@ -99,7 +99,7 @@ namespace TetrisProject
             bool clear = true;
 
             foreach (Block b in blocks)
-                clear = b.TryMoveDown();
+                clear &= b.TryMoveDown();
 
             if (clear)
                 foreach (Block b in blocks)

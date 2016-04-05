@@ -32,7 +32,7 @@ namespace TetrisProject
         /// </summary>
         public Color Colour
         {
-            get;
+            get { return colour; }
         }
 
         /// <summary>

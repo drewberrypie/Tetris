@@ -33,7 +33,8 @@ namespace TetrisProject
             shapeFactory = proxy;
             shape = proxy;
 
-            shape.JoinPile += addToPile;
+            shape.JoinPile += new JoinPileHandler(addToPile);
+            shapeFactory.DeployNewShape();
         }
 
         /// <summary>
