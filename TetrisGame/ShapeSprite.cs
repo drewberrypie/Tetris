@@ -38,6 +38,7 @@ namespace TetrisGame
         {
             oldState = Keyboard.GetState();
             threshold = 6;
+            counterInput = 0;
             base.Initialize();
         }
 
@@ -52,16 +53,22 @@ namespace TetrisGame
         {
             checkInput();
 
-            int dropDelay = (int)((11 - score.Level) * 0.05);
-            if (counterMoveDown == dropDelay)
+            int dropDelay = (int)((11 - score.Level) * 0.5);
+            if (counterInput == threshold)
             {
-                shape.MoveDown();
-                counterMoveDown = 0;
+                if (counterMoveDown == dropDelay)
+                {
+                    shape.MoveDown();
+                    counterMoveDown = 0;
+                }
+                else
+                {
+                    counterMoveDown++;
+                }
+                counterInput = 0;
             }
             else
-            {
-                counterMoveDown++;
-            }
+                counterInput++;
         }
 
         public override void Draw(GameTime gameTime)
@@ -80,22 +87,32 @@ namespace TetrisGame
         {
             KeyboardState newState = Keyboard.GetState();
 
-            if (newState.IsKeyDown(Keys.Right))
+            if (counterInput == threshold)
             {
-                shape.MoveRight();
+                if (newState.IsKeyDown(Keys.Right))
+                {
+                    shape.MoveRight();
+                }
+                if (newState.IsKeyDown(Keys.Left))
+                {
+                    shape.MoveLeft();
+                }
+                if (newState.IsKeyDown(Keys.Down))
+                {
+                    shape.MoveDown();
+                }
+                if (newState.IsKeyDown(Keys.Up))
+                {
+                    shape.Drop();
+                }
+                if (newState.IsKeyDown(Keys.Space))
+                {
+                    shape.Rotate();
+                }
+                counterInput = 0;
             }
-            if (newState.IsKeyDown(Keys.Left))
-            {
-                shape.MoveLeft();
-            }
-            if (newState.IsKeyDown(Keys.Down))
-            {
-                shape.MoveDown();
-            }
-            if (newState.IsKeyDown(Keys.Up))
-            {
-                shape.Drop();
-            }
+            else
+                counterInput++;
         }
     }
 }
