@@ -29,7 +29,7 @@ namespace TetrisProject
         /// </summary>
         public int Level
         {
-            get;
+            get { return level; }
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace TetrisProject
         /// </summary>
         public int Lines
         {
-            get;
+            get { return lines; }
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace TetrisProject
         /// </summary>
         public int Highscore
         {
-            get;
+            get { return highscore; }
         }
 
         /// <summary>

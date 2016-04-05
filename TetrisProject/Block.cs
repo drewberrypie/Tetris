@@ -92,6 +92,9 @@ namespace TetrisProject
 
             try
             {
+                if (check.X > board.GetLength(0) || check.Y > board.GetLength(1))
+                    clear = false;
+
                 if (!board[check.X, check.Y].Equals(Color.Gray))
                     clear = false;
             }

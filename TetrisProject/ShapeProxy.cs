@@ -89,6 +89,8 @@ namespace TetrisProject
                 default:
                     break;
             }
+            // Event handler
+            current.JoinPile += OnJoinPile;
         }
 
         /// <summary>

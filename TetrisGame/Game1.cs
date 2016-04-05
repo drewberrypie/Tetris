@@ -116,6 +116,7 @@ namespace TetrisGame
         public void gameOver()
         {
             scoreSprite.Play = false;
+            Components.Remove(shapeSprite);
         }
     }
 }

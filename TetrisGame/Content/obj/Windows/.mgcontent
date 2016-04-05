@@ -4,8 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Alienware/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/EmptyBlock.png</File>
-    <File>C:/Users/Alienware/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/FilledBlock.png</File>
-    <File>C:/Users/Alienware/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/scoreFont.spritefont</File>
+    <File>C:/Users/drewa/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/EmptyBlock.png</File>
+    <File>C:/Users/drewa/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/FilledBlock.png</File>
+    <File>C:/Users/drewa/Documents/Visual Studio 2015/Projects/Tetris/TetrisGame/Content/scoreFont.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

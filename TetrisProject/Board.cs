@@ -30,11 +30,12 @@ namespace TetrisProject
                  board[x, y] = Color.Gray;
 
             ShapeProxy proxy = new ShapeProxy(this);
+
             shapeFactory = proxy;
             shape = proxy;
 
-            shape.JoinPile += new JoinPileHandler(addToPile);
             shapeFactory.DeployNewShape();
+            shape.JoinPile += addToPile;
         }
 
         /// <summary>
@@ -93,7 +94,7 @@ namespace TetrisProject
         private void addToPile(IShape shape)
         {
             //Put the color of the blocks into the board
-            for(int i = 0; i < shape.Length; i++)
+            for (int i = 0; i < shape.Length; i++)
                 board[shape[i].Position.X, shape[i].Position.Y] = shape[i].Colour;
 
             bool clear;
@@ -106,9 +107,9 @@ namespace TetrisProject
                 //Go through rows left-right
                 for (int x = 0; x < board.GetLength(0); x++)
                     clear &= !board[x, y].Equals(Color.Gray);
-                
+
                 //If a row is filled
-                if(clear)
+                if (clear)
                 {
                     //Increase number of lines cleared
                     lines++;
@@ -118,16 +119,21 @@ namespace TetrisProject
                         board[clearX, y] = Color.Gray;
 
                     //Drop all blocks above
-                    for (int dropY = y; dropY > 0; y--)
+                    for (int dropY = y; dropY > 0; dropY--)
                         for (int dropX = 0; dropX < board.GetLength(0); dropX++)
                             board[dropX, dropY] = board[dropX, dropY - 1];
+
+                    //Fire event for lines cleared
+                    OnLinesCleared(lines);
                 }
             }
-            //Fire event for lines cleared
-            OnLinesCleared(lines);
-            
-            //Get a new shape
-            shapeFactory.DeployNewShape();
+
+
+            //Game Over or get a new shape
+            if (!Equals(board[5, 0], Color.Gray))
+               OnGameOver();
+            else
+                shapeFactory.DeployNewShape();
         }
     }
 }

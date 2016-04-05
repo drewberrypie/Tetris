@@ -16,6 +16,7 @@ namespace TetrisGame
         private SpriteBatch spriteBatch;
         private SpriteFont font;
         private bool play = true;
+        private string time;
 
         /// <summary>
         /// The ScoreSprite is responsible for writing score-related information, such as the level, number of lines cleared, and the score.
@@ -56,15 +57,14 @@ namespace TetrisGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Draw(GameTime gameTime)
         {
-            string time = gameTime.TotalGameTime.Minutes + ":" + gameTime.TotalGameTime.Seconds + ":" + gameTime.TotalGameTime.Milliseconds;
-
-            spriteBatch.Begin();
             if (play)
-            {
+                time = gameTime.TotalGameTime.Minutes + ":" + gameTime.TotalGameTime.Seconds + ":" + gameTime.TotalGameTime.Milliseconds;
+            
+            spriteBatch.Begin();
                 spriteBatch.DrawString(font, "Score: " + score.Highscore, new Vector2(310, 60), Color.Black);
                 spriteBatch.DrawString(font, "Level: " + score.Level, new Vector2(310, 85), Color.Black);
                 spriteBatch.DrawString(font, "Time: " + time, new Vector2(310, 165), Color.Black);
-            }            
+
             spriteBatch.End();
         }
 
